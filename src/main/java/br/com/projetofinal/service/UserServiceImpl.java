@@ -13,14 +13,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    private void verifyUserRegistration(User user){
-        if(this.userRepository.findByUsername(user.getUsername()).isPresent())
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+    public boolean findByUsername(String username){
+        return this.userRepository.findByUsername(username).isPresent();
+
     }
 
     @Override
     public User save(User user) {
-        verifyUserRegistration(user);
         return this.userRepository.save(user) ;
     }
 }

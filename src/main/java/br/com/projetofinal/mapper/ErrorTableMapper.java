@@ -16,9 +16,9 @@ public interface ErrorTableMapper {
     @Mappings({
             @Mapping(source = "id", target = "id"),
             @Mapping(source = "level",target = "level"),
-            @Mapping(source = "descricao_do_evento",target = "descricao_do_evento"),
+            @Mapping(source = "descricaoDoEvento",target = "descricaoDoEvento"),
             @Mapping(source = "origem",target = "origem"),
-            @Mapping(source = "data_do_evento",target = "data_do_evento", dateFormat = "yyyy-MM-dd HH:mm"),
+            @Mapping(source = "dataDoEvento",target = "dataDoEvento", dateFormat = "yyyy-MM-dd HH:mm:ss"),
             @Mapping(source = "quantidade",target = "quantidade")
     })
    ErrorTableDTO map(ErrorTable errorTable);

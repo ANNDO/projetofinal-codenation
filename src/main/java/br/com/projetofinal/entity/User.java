@@ -3,15 +3,14 @@ package br.com.projetofinal.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-@Entity
+
+
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
 @Table(name = "users")
 public class User {
 
@@ -26,6 +25,8 @@ public class User {
     @NotNull
     @NotBlank(message = "O campo 'password' é mandatório.")
     private String password;
+
+
 
 
 }

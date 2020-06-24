@@ -6,4 +6,6 @@ import br.com.projetofinal.entity.User;
 public interface UserService {
 
     User save(User user);
+    boolean findByUsername(String username);
+
 }

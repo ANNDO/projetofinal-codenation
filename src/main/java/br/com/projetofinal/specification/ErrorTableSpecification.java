@@ -11,17 +11,17 @@ public class ErrorTableSpecification {
         return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("level"),level);
 
     }
-    public static Specification<ErrorTable> descricao_do_evento (String descricao_do_evento){
-        return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("descricao_do_evento"),descricao_do_evento);
+    public static Specification<ErrorTable> descricaoDoEvento (String descricaoDoEvento){
+        return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("descricaoDoEvento"),descricaoDoEvento);
     }
-    public static Specification<ErrorTable> log_do_evento (String log_do_evento){
-        return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("log_do_evento"),log_do_evento);
+    public static Specification<ErrorTable> logDoEvento (String logDoEvento){
+        return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("logDoEvento"),logDoEvento);
     }
     public static Specification<ErrorTable> origem (String origem){
         return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("origem"),origem);
     }
-    public static Specification<ErrorTable> data_do_evento (LocalDateTime data_do_evento){
-        return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("descricao_do_evento"),data_do_evento);
+    public static Specification<ErrorTable> dataDoEvento (LocalDateTime dataDoEvento){
+        return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("dataDoEvento"),dataDoEvento);
     }
     public static Specification<ErrorTable> quantidade (Long quantidade){
         return (root,criteriaQuery,criteriaBuilder) -> criteriaBuilder.equal(root.get("quantidade"),quantidade);

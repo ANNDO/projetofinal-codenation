@@ -1,9 +1,11 @@
 package br.com.projetofinal.service;
 
+import br.com.projetofinal.controller.advice.ErrorTableAdvice;
 import br.com.projetofinal.entity.ErrorTable;
 import br.com.projetofinal.repository.ErrorTableRepository;
 import br.com.projetofinal.specification.ErrorTableSpecification;
 import lombok.AllArgsConstructor;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,12 +27,13 @@ public class ErrorTableServiceImpl implements ErrorTableService {
     @Autowired
     private ErrorTableRepository errorTableRepository;
 
+
     @Override
     public Page<ErrorTable> findAll(String level,
-                                    String descricao_do_evento,
-                                    String log_do_evento,
+                                    String descricaoDoEvento,
+                                    String logDoEvento,
                                     String origem,
-                                    LocalDateTime data_do_evento,
+                                    LocalDateTime dataDoEvento,
                                     Long quantidade,
                                     int page,
                                     int size,
@@ -39,10 +42,10 @@ public class ErrorTableServiceImpl implements ErrorTableService {
 
         return this.errorTableRepository.findAll(
                 Specification.where(ErrorTableSpecification.level(level))
-                .or(ErrorTableSpecification.descricao_do_evento(descricao_do_evento))
-                .or(ErrorTableSpecification.log_do_evento(log_do_evento))
+                .or(ErrorTableSpecification.descricaoDoEvento(descricaoDoEvento))
+                .or(ErrorTableSpecification.logDoEvento(logDoEvento))
                 .or(ErrorTableSpecification.origem(origem))
-                .or(ErrorTableSpecification.data_do_evento(data_do_evento))
+                .or(ErrorTableSpecification.dataDoEvento(dataDoEvento))
                 .or(ErrorTableSpecification.quantidade(quantidade)),pageRequest);
     }
 

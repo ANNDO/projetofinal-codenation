@@ -22,8 +22,8 @@ public class ErrorTableDTO {
 
     private Long id;
     private String level;
-    private String descricao_do_evento;
+    private String descricaoDoEvento;
     private String origem;
-    private LocalDateTime data_do_evento;
+    private LocalDateTime dataDoEvento;
     private Long quantidade;
 }

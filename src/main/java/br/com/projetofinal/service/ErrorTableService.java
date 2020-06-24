@@ -13,10 +13,10 @@ public interface ErrorTableService {
 
    Optional<ErrorTable> findErrorById(Long id);
    Page<ErrorTable> findAll(String level,
-                            String descricao_do_evento,
-                            String log_do_evento,
+                            String descricaoDoEvento,
+                            String logDoEvento,
                             String origem,
-                            LocalDateTime data_do_evento,
+                            LocalDateTime dataDoEvento,
                             Long quantidade,
                             int page,
                             int size,

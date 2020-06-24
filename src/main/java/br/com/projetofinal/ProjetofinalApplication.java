@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 public class ProjetofinalApplication {
 
-	//private static final Logger logger = LoggerFactory.getLogger(ProjetofinalApplication.class);
-
 	public static void main(String[] args) {
-			//logger.debug("UEPA UEPA");
 		SpringApplication.run(ProjetofinalApplication.class, args);
 	}
 
