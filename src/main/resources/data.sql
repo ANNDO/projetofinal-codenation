@@ -26,4 +26,7 @@ values ('Info', 'outra descrição de evento info', 'outro log de evento info', 
 insert into error_table (level, descricao_do_evento, log_do_evento, origem, data_do_evento, quantidade)
 values ('Info', 'mais uma descrição de evento info', 'e outro log de evento info', 'sistema C', now(),150);
 
+insert into user (username,password)
+values ('user1','54321')
+
 
